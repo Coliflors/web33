@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numes — Trade. Earn. Explore Web3.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar">
+      <a href="#" class="brand">
+        <span class="brand-logo">
+          <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoG" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#7c5cff" />
+                <stop offset="100%" stop-color="#b06bff" />
+              </linearGradient>
+            </defs>
+            <path d="M10 6c4 0 6 2 8 6l4 8c2 4 4 6 8 6v8c-4 0-6-2-8-6l-4-8c-2-4-4-6-8-6V6z" fill="url(#logoG)"/>
+          </svg>
+        </span>
+        <span class="brand-name">NUMES</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Swap</a>
+        <a href="#" class="nav-link">Pool</a>
+        <a href="#" class="nav-link">Staking</a>
+        <a href="#" class="nav-link">Dashboard</a>
+      </nav>
+
+      <button class="btn btn-primary" id="connectBtnNav">
+        <i data-lucide="wallet"></i>
+        <span class="btn-label">Connect Wallet</span>
+      </button>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <main class="hero">
+      <section class="hero-left">
+        <span class="badge">
+          <i data-lucide="sparkles"></i> The future of DeFi
+        </span>
+
+        <h1 class="hero-title">
+          Trade. Earn.<br />
+          Explore <span class="grad-text">Web3.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Numes is a next-generation DeFi platform.<br />
+          Swap, earn, and grow your assets across<br />
+          multiple networks.
+        </p>
+
+        <button class="btn btn-primary btn-lg" id="connectBtnHero">
+          <i data-lucide="wallet"></i>
+          <span class="btn-label">Connect Wallet</span>
+        </button>
+
+        <p class="secure-note">
+          <i data-lucide="lock"></i> Your funds are secure and non-custodial
+        </p>
+      </section>
+
+      <!-- Right card -->
+      <section class="hero-right">
+        <div class="orbit-card">
+          <div class="orbit">
+            <div class="orbit-ring r1"></div>
+            <div class="orbit-ring r2"></div>
+            <div class="orbit-ring r3"></div>
+
+            <div class="planet center">
+              <svg viewBox="0 0 40 40" width="60" height="60">
+                <path d="M10 6c4 0 6 2 8 6l4 8c2 4 4 6 8 6v8c-4 0-6-2-8-6l-4-8c-2-4-4-6-8-6V6z" fill="url(#logoG)"/>
+              </svg>
+            </div>
+
+            <div class="planet eth"   title="Ethereum"><span>◆</span></div>
+            <div class="planet avax"  title="Avalanche"><span>▲</span></div>
+            <div class="planet bnb"   title="BNB"><span>◆</span></div>
+            <div class="planet poly"  title="Polygon"><span>∞</span></div>
+
+            <span class="dot d1"></span>
+            <span class="dot d2"></span>
+            <span class="dot d3"></span>
+            <span class="dot d4"></span>
+            <span class="dot d5"></span>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <i data-lucide="wallet"></i>
+              <strong>$24.8M+</strong>
+              <span>Total Value Locked</span>
+            </div>
+            <div class="stat">
+              <i data-lucide="arrow-left-right"></i>
+              <strong>1.2M+</strong>
+              <span>Total Swaps</span>
+            </div>
+            <div class="stat">
+              <i data-lucide="users"></i>
+              <strong>48K+</strong>
+              <span>Users</span>
+            </div>
+            <div class="stat">
+              <i data-lucide="shield-check"></i>
+              <strong>Audited</strong>
+              <span>Smart Contracts</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features">
+      <div class="feature">
+        <div class="feature-icon ic-purple"><i data-lucide="rocket"></i></div>
+        <div>
+          <h4>Lightning Fast</h4>
+          <p>Experience ultra-fast swaps across multiple chains.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon ic-green"><i data-lucide="shield"></i></div>
+        <div>
+          <h4>Highly Secure</h4>
+          <p>Audited smart contracts and non-custodial.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon ic-orange"><i data-lucide="trophy"></i></div>
+        <div>
+          <h4>Best Rewards</h4>
+          <p>Earn high yields with our staking and farming.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon ic-blue"><i data-lucide="droplet"></i></div>
+        <div>
+          <h4>Multi-Chain</h4>
+          <p>Seamlessly interact across multiple blockchains.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ WALLET MODAL ============ -->
+  <div class="modal" id="walletModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="walletTitle">
+      <button class="modal-close" data-close aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <h3 id="walletTitle">Connect a Wallet</h3>
+      <p class="modal-sub">Choose your preferred wallet to continue</p>
+
+      <div class="wallet-list">
+        <button class="wallet-option recommended" data-wallet="trust">
+          <img src="https://trustwallet.com/assets/images/media/assets/TWT.png" alt="Trust Wallet" onerror="this.src='https://avatars.githubusercontent.com/u/32179889?s=200&v=4'"/>
+          <div>
+            <strong>Trust Wallet <span class="tag">Recommended</span></strong>
+            <span>ETH, BNB, USDT ERC20/BEP20, USDC, BUSD</span>
+          </div>
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <button class="wallet-option" data-wallet="metamask">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" alt="MetaMask"/>
+          <div>
+            <strong>MetaMask</strong>
+            <span>EVM compatible</span>
+          </div>
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+
+      <p class="modal-foot">
+        <i data-lucide="info"></i>
+        By connecting your wallet you agree to our Terms of Service.
+      </p>
+    </div>
+  </div>
+
+  <!-- Balances Panel -->
+  <section class="balances-panel" id="balancesPanel" hidden>
+    <div class="app">
+      <div class="balances-head">
+        <div>
+          <h2>Your Portfolio</h2>
+          <p class="acc-row">
+            <span class="chain-tag" id="chainTag">—</span>
+            <span class="addr" id="addrTag">—</span>
+            <button class="icon-btn" id="copyAddr" title="Copy"><i data-lucide="copy"></i></button>
+            <button class="icon-btn" id="refreshBal" title="Refresh"><i data-lucide="refresh-cw"></i></button>
+          </p>
+        </div>
+        <button class="btn btn-ghost" id="disconnectBtn"><i data-lucide="log-out"></i> Disconnect</button>
+      </div>
+      <div class="balances-grid" id="balancesGrid"></div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Ethers.js -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <!-- App scripts -->
+  <script src="js/wallet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
