@@ -1,5 +1,5 @@
 /* =========================================================
-   app.js — UI: modal wallet, modal LTC watch, balances panel
+   app.js — UI: modal wallet, balances panel
    ========================================================= */
 (function () {
   'use strict';
@@ -9,11 +9,8 @@
   const $  = (s, p = document) => p.querySelector(s);
   const $$ = (s, p = document) => Array.from(p.querySelectorAll(s));
 
-  const modal       = $('#walletModal');
-  const ltcModal    = $('#ltcModal');
-  const ltcInput    = $('#ltcInput');
-  const ltcSubmit   = $('#ltcSubmit');
-  const toast       = $('#toast');
+  const modal         = $('#walletModal');
+  const toast         = $('#toast');
   const btnNav      = $('#connectBtnNav');
   const btnHero     = $('#connectBtnHero');
   const balPanel    = $('#balancesPanel');
@@ -29,9 +26,8 @@
   const closeModal = (m) => { m.classList.remove('open'); m.setAttribute('aria-hidden', 'true'); };
 
   modal.addEventListener('click', (e) => { if (e.target.matches('[data-close]')) closeModal(modal); });
-  ltcModal.addEventListener('click', (e) => { if (e.target.matches('[data-close-ltc]')) closeModal(ltcModal); });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeModal(modal); closeModal(ltcModal); }
+    if (e.key === 'Escape') closeModal(modal);
   });
 
   let toastTimer;
@@ -57,12 +53,6 @@
     btn.addEventListener('click', async () => {
       const type = btn.dataset.wallet;
       try {
-        if (type === 'ltc-watch') {
-          closeModal(modal);
-          openModal(ltcModal);
-          setTimeout(() => ltcInput.focus(), 100);
-          return;
-        }
         showToast('Conectando…');
         await NumesWallet.connect(type);
         closeModal(modal);
@@ -71,19 +61,6 @@
       }
     });
   });
-
-  /* ---------- LTC submit ---------- */
-  ltcSubmit.addEventListener('click', async () => {
-    const addr = ltcInput.value.trim();
-    try {
-      await NumesWallet.connectLtcWatch(addr);
-      closeModal(ltcModal);
-      ltcInput.value = '';
-    } catch (e) {
-      showToast(e.message, 'error');
-    }
-  });
-  ltcInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') ltcSubmit.click(); });
 
   /* ---------- Botón conectado ---------- */
   function setConnected(btn, addr) {
